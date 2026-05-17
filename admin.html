@@ -4,8 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Terê Verde Online - Dashboard</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
 
     body {
       background: #f4f1e8;
@@ -64,6 +71,11 @@
       padding: 1.5rem;
       border-radius: 14px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .kpi-card:hover {
+      transform: translateY(-4px);
     }
 
     .kpi-card h3 {
@@ -106,13 +118,74 @@
       background: #4C8C6B;
       color: white;
       cursor: pointer;
+      transition: 0.3s;
     }
+
+    .action-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .status {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-weight: bold;
+      margin: 1rem 0;
+    }
+
+    .aberto {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .fechado {
+      background: #fee2e2;
+      color: #991b1b;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: rgba(0,0,0,0.5);
+
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: white;
+      padding: 2rem;
+      border-radius: 14px;
+      width: 90%;
+      max-width: 400px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .modal-content input,
+    .modal-content textarea {
+      padding: 0.8rem;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+    }
+
   </style>
 </head>
+
 <body>
 
   <aside class="sidebar">
     <h2>Terê Verde</h2>
+
     <a href="#">Dashboard</a>
     <a href="#">Parques</a>
     <a href="#">Eventos</a>
@@ -122,38 +195,131 @@
   </aside>
 
   <main class="main">
+
     <div class="topbar">
       <h1>Painel Administrativo</h1>
       <span>26/04/2026 • Admin</span>
     </div>
 
     <section class="kpis">
-      <div class="kpi-card"><p>Parques</p><h3>12</h3></div>
-      <div class="kpi-card"><p>Eventos</p><h3>5</h3></div>
-      <div class="kpi-card"><p>Alertas</p><h3>2</h3></div>
-      <div class="kpi-card"><p>Visitantes</p><h3>347</h3></div>
+
+      <div class="kpi-card">
+        <p>Parques</p>
+        <h3>12</h3>
+      </div>
+
+      <div class="kpi-card">
+        <p>Eventos</p>
+        <h3>5</h3>
+      </div>
+
+      <div class="kpi-card">
+        <p>Alertas</p>
+        <h3>2</h3>
+      </div>
+
+      <div class="kpi-card">
+        <p>Visitantes</p>
+        <h3>347</h3>
+      </div>
+
     </section>
 
     <section class="dashboard-grid">
+
       <div class="panel">
+
         <h2>Status dos Parques</h2>
+
         <table>
-          <tr><th>Parque</th><th>Status</th><th>Atualização</th></tr>
-          <tr><td>Serra dos Órgãos</td><td>Aberto</td><td>14:30</td></tr>
-          <tr><td>Parque Municipal</td><td>Fechado</td><td>13:10</td></tr>
-          <tr><td>Vale Verde</td><td>Aberto</td><td>12:45</td></tr>
+          <tr>
+            <th>Parque</th>
+            <th>Status</th>
+            <th>Atualização</th>
+          </tr>
+
+          <tr>
+            <td>Serra dos Órgãos</td>
+            <td>Aberto</td>
+            <td>14:30</td>
+          </tr>
+
+          <tr>
+            <td>Parque Municipal</td>
+            <td>Fechado</td>
+            <td>13:10</td>
+          </tr>
+
+          <tr>
+            <td>Vale Verde</td>
+            <td>Aberto</td>
+            <td>12:45</td>
+          </tr>
         </table>
+
       </div>
 
       <div class="panel">
-        <h2>Ações Rápidas</h2>
-        <button class="action-btn">Criar Evento</button>
-        <button class="action-btn">Emitir Alerta</button>
-        <button class="action-btn">Atualizar Horários</button>
-        <button class="action-btn">Gerar Relatório</button>
+
+        <h2>Status do Sistema</h2>
+
+        <span id="statusParque" class="status aberto">
+          Aberto
+        </span>
+
+        <button onclick="alterarStatus()" class="action-btn">
+          Alterar Status
+        </button>
+
+        <h2 style="margin-top: 2rem;">Ações Rápidas</h2>
+
+        <button class="action-btn" onclick="abrirModal()">
+          Criar Evento
+        </button>
+
+        <button class="action-btn">
+          Emitir Alerta
+        </button>
+
+        <button class="action-btn">
+          Atualizar Horários
+        </button>
+
+        <button class="action-btn">
+          Gerar Relatório
+        </button>
+
       </div>
+
     </section>
+
   </main>
+
+  
+
+  <div id="modalEvento" class="modal">
+
+    <div class="modal-content">
+
+      <h2>Novo Evento</h2>
+
+      <input type="text" placeholder="Nome do evento">
+
+      <input type="date">
+
+      <textarea placeholder="Descrição"></textarea>
+
+      <button class="action-btn" onclick="fecharModal()">
+        Salvar Evento
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="js/script.js"></script>
 
 </body>
 </html>
+
+

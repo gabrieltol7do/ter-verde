@@ -179,3 +179,455 @@ footer {
   color: #2E5E4E;
   text-decoration: none;
 }
+
+.status {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.aberto {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.fechado {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.manutencao {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.institucional,
+.parques,
+.biodiversidade,
+.eventos {
+  padding: 5rem 8%;
+}
+
+.institucional {
+  background: #f8f6f1;
+  text-align: center;
+}
+
+.tag {
+  display: inline-block;
+  background: #d1fae5;
+  color: #065f46;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.institucional h2,
+.parques h2,
+.biodiversidade h2,
+.eventos h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #1f2937;
+}
+
+.institucional p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.cards-parques,
+.bio-grid,
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.parque-card,
+.bio-card,
+.evento-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.parque-card:hover,
+.bio-card:hover,
+.evento-card:hover {
+  transform: translateY(-6px);
+}
+
+.parque-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.parque-info {
+  padding: 1.5rem;
+}
+
+.parque-info h3,
+.bio-card h3,
+.evento-card h3 {
+  margin-bottom: 1rem;
+  color: #2E5E4E;
+}
+
+.parque-info p,
+.bio-card p,
+.evento-card p {
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.bio-card,
+.evento-card {
+  padding: 2rem;
+}
+
+.evento-card span {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #2E5E4E;
+}
+
+.detalhes-parques,
+.alertas {
+  padding: 5rem 8%;
+  background: #f8f6f1;
+}
+
+.detalhes-parques h2,
+.alertas h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  color: #1f2937;
+}
+
+.detalhes-grid,
+.alertas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.detalhe-card,
+.alerta-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.detalhe-card:hover,
+.alerta-card:hover {
+  transform: translateY(-6px);
+}
+
+.detalhe-card h3,
+.alerta-card h3 {
+  margin-bottom: 1rem;
+  color: #2E5E4E;
+}
+
+.detalhe-card p,
+.alerta-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.detalhe-card ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.detalhe-card li {
+  margin-bottom: 0.8rem;
+  color: #374151;
+}
+
+.hero-parques {
+  height: 70vh;
+  background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  background: rgba(0,0,0,0.45);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  max-width: 700px;
+  line-height: 1.7;
+}
+
+.parques-page,
+.trilhas,
+.eventos-page {
+  padding: 5rem 8%;
+}
+
+.parques-page h2,
+.trilhas h2,
+.eventos-page h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+  color: #1f2937;
+}
+
+.parques-grid,
+.trilhas-grid,
+.eventos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.parque-page-card,
+.trilha-card,
+.evento-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.parque-page-card:hover,
+.trilha-card:hover,
+.evento-card:hover {
+  transform: translateY(-6px);
+}
+
+.parque-page-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.parque-page-info {
+  padding: 1.8rem;
+}
+
+.parque-page-info h3,
+.trilha-card h3,
+.evento-card h3 {
+  margin-bottom: 1rem;
+  color: #2E5E4E;
+}
+
+.parque-page-info p,
+.trilha-card p,
+.evento-card p {
+  color: #4b5563;
+  line-height: 1.7;
+}
+
+.parque-page-info ul {
+  list-style: none;
+  margin: 1.5rem 0;
+}
+
+.parque-page-info li {
+  margin-bottom: 0.8rem;
+}
+
+.trilha-card,
+.evento-card {
+  padding: 2rem;
+}
+
+.trilha-card span,
+.evento-card span {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #2E5E4E;
+}
+
+.stats {
+  padding: 4rem 8%;
+  background: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 2rem;
+}
+
+.stat-card {
+  background: #f8fafc;
+
+  padding: 2rem;
+
+  border-radius: 18px;
+
+  text-align: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+  transition: 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h3 {
+  font-size: 2.5rem;
+  color: #2E5E4E;
+}
+
+.biodiversidade {
+  padding: 5rem 8%;
+
+  background: #eef6f1;
+}
+
+.bio-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  gap: 2rem;
+
+  margin-top: 3rem;
+}
+
+.bio-card {
+  background: white;
+
+  padding: 2rem;
+
+  border-radius: 18px;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+
+  transition: 0.3s;
+}
+
+.bio-card:hover {
+  transform: translateY(-6px);
+}
+
+.bio-card h3 {
+  margin-bottom: 1rem;
+
+  color: #2E5E4E;
+}
+
+.institucional {
+  padding: 6rem 8%;
+
+  background: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.6)
+  ),
+
+  url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee');
+
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+
+  color: white;
+}
+
+.institucional-content {
+  max-width: 700px;
+  margin: auto;
+}
+
+.institucional h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  color: white
+}
+
+.institucional p {
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  color: white
+}
+
+.cta-btn {
+  padding: 1rem 2rem;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #4C8C6B;
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.cta-btn:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .parques-grid,
+  .bio-grid,
+  .stats-grid,
+  .event-grid,
+  .trilhas-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+}
