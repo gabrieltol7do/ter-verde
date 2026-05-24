@@ -629,5 +629,70 @@ footer {
   .hero h1 {
     font-size: 1.8rem;
   }
+.details-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.9rem 1.4rem;
+  background: #2E5E4E;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-weight: bold;
+}
 
+.details-btn:hover {
+  background: #4C8C6B;
+  transform: translateY(-2px);
+}
+
+.parque-link {
+
+  text-decoration: none;
+
+  color: inherit;
+
+  display: block;
+}
+.footer {
+  background: #1f2937;
+  color: white;
+  padding: 4rem 8% 2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  margin-bottom: 1rem;
+  color: #d1fae5;
+}
+
+.footer-section p {
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+.footer-section a {
+  display: block;
+  color: #d1d5db;
+  text-decoration: none;
+  margin-bottom: 0.8rem;
+  transition: 0.3s;
+}
+
+.footer-section a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: #9ca3af;
+}
 }

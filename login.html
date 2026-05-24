@@ -3,26 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Login - Terê Verde Online</title>
+
   <link rel="stylesheet" href="css/style.css">
 </head>
-<script src="js/script.js"></script>
+
 <body>
 
 <section class="login-page">
+
   <div class="login-card">
+
     <h2>Área Administrativa</h2>
-    <p>Acesse o painel de gestão</p>
+
+    <p>
+      Entre com suas credenciais para acessar
+      o painel de monitoramento ambiental.
+    </p>
 
     <form id="loginForm">
-      <input type="email" id="email" placeholder="E-mail" required>
-      <input type="password" id="senha" placeholder="Senha" required>
-      <button type="submit" class="btn">Entrar</button>
+
+      <input
+        type="email"
+        id="email"
+        placeholder="admin@teste.com"
+        required
+      >
+
+      <input
+        type="password"
+        id="senha"
+        placeholder="Digite sua senha"
+        required
+      >
+
+      <button type="submit" class="btn">
+        Entrar no Sistema
+      </button>
+
     </form>
 
-    <a href="index.html">← Voltar ao portal</a>
+    <p style="margin-top: 15px;">
+      Usuário teste:
+      <strong>admin@teste.com</strong>
+      <br>
+      Senha:
+      <strong>1234</strong>
+    </p>
+
+    <a href="index.html">
+      ← Voltar ao portal
+    </a>
+
   </div>
+
 </section>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>
